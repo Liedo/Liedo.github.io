@@ -15,8 +15,11 @@ We will also use [MathJax](https://www.mathjax.org/)
 to interpret correctly the Latex code included in the pages (just change the _layouts/default.html file 
 by adding right before the header the following lines: 
 
-```html
+``` 
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+```
+
+```
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>  
 )  
 ```
