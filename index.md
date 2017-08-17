@@ -5,8 +5,6 @@ tagline: technical documentation for JDemetra$+$ using GitHub Pages
 description: Minimal tutorial on making a simple website with GitHub Pages
 ---
 
-# Liedo.github.io
-This readme files is part of the prototype for time-series software documentation
 
 Does $$\Latex$$ work here?  $$ \phi $$
 
