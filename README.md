@@ -1,4 +1,4 @@
 # Liedo.github.io
-Prototype for time-series software documentation
+This readme files is part of the prototype for time-series software documentation
 
-$$ \phi $$
+Does \Latex work here?  $$ \phi $$
