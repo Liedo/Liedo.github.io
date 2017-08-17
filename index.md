@@ -9,15 +9,19 @@ description: Minimal tutorial on making a simple website with GitHub Pages
 [Github Pages](https://pages.github.com) provide a simple way to make a
 website using
 [Markdown](https://daringfireball.net/projects/markdown/) and
-[git](https://git-scm.com). We will also use [MathJax](https://www.mathjax.org/) 
+[git](https://git-scm.com). 
+
+We will also use [MathJax](https://www.mathjax.org/) 
 to interpret correctly the Latex code included in the pages (just change the _layouts/default.html file 
 by adding right before the header the following lines: 
+
+```html
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>  
 )  
+```
 
-
-Does $$\Latex$$ work here?  $$ \phi $$
+Does $\Latex$ work here?  $$ \phi $$
 
 
 This prototype has started by cloning a site created with this method by 
