@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: forecasting evaluation
 tagline: technical documentation for JDemetra$+$ using GitHub Pages
 description: Minimal tutorial on making a simple website with GitHub Pages
