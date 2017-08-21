@@ -5,6 +5,12 @@ tagline: technical documentation for JDemetra$+$ using GitHub Pages
 description: Minimal tutorial on making a simple website with GitHub Pages
 ---
 
+<head>
+		<title>Index Page</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+
 
 [Github Pages](https://pages.github.com) provide a simple way to make a
 website using
