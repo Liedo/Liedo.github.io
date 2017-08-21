@@ -24,7 +24,7 @@ by adding right before the header the following lines:
 )  
 ```
 
-Does $\Latex$ work here?  $$ \phi $$. It is not working so well.
+Does $$\Latex$$ work here?  $$ \phi $$. It is not working so well.
 
 
 This prototype has started by cloning a site created with this method by 
