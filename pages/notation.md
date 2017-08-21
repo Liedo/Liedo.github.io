@@ -1,3 +1,10 @@
+---
+layout: default
+title: Basic Notation
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Introducing the notation
+---
+
 The prediction errors are defined with a reference $i$ to the information set available at the time the forecast was made: 
 
 $$ e_{t|i}=y_{t}-\hat{y}_{t|\mathcal{F}_{i}}$$ 
