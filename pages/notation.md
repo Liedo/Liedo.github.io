@@ -34,7 +34,6 @@ In forecasting comparisons involving competing forecasts resulting from the same
 |   Unbiasedness	| $$ E[e_{t}]=0  $$	|
 |   Autocorrelation	| $$ E[e_{t}e_{t-1}]=0 $$    	|
 |   Equality  in  squared  errors	|  $$ E[e^2_{t}-\breve{e}^2_{t}]=0  $$  	|
-|   Equality  in  absolute  errors	|  $$ E[|e_{t}|-|\breve{e}_{t}|]=0 $$  	|
 |   Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ |   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$  	|
 |   Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ |   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$ |
 
