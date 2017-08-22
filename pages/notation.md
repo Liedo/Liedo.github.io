@@ -26,6 +26,15 @@ $$ \hat{y}_{t|\mathcal{F}_{i}}=E_{\theta}[y_{t}|\mathcal{F}_{i}] $$ to highlight
  
 
 In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. We will first test the following hypothesis involving forecast errors: 
+
+|   Test	|Null   	|
+|---	|---	|
+|   Unbiasedness	| $$ E[e_{t}]=0  $$	|
+|   Autocorrelation	| $$ E[e_{t}e_{t-1}]=0 $$    	|
+
+
+
+
 \begin{eqnarray}
 Unbiasedness:~                     &  E[e_{t}]=0                     \\
 Autocorrelation:~       &  E[e_{t}e_{t-1}]=0                     \\
