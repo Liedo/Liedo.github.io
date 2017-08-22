@@ -22,7 +22,9 @@ would be given by methods and a subset of $$ \mathcal{F}_{i} $$ which is unknown
 
 For model-based forecasts, we use the following notation:
 
-$$ \hat{y}_{t|\mathcal{F}_{i}}=E_{\theta}[y_{t}|\mathcal{F}_{i}] $$ to highlight the fact that they are based on model-consistent expectations given by the parameter vector $$ \theta $$.  
+$$ \hat{y}_{t|\mathcal{F}_{i}}=E_{\theta}[y_{t}|\mathcal{F}_{i}] $$ 
+to highlight the fact that they are based on model-consistent 
+expectations given by the parameter vector $$ \theta $$ .  
  
 
 In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. We will first test the following hypothesis involving forecast errors: 
@@ -35,11 +37,8 @@ In forecasting comparisons involving competing forecasts resulting from the same
 
 
 
-\begin{eqnarray}
-Unbiasedness:~                     &  E[e_{t}]=0                     \\
-Autocorrelation:~       &  E[e_{t}e_{t-1}]=0                     \\
-Equality ~in ~squared~ errors:~ &  E[e^2_{t}-\breve{e}^2_{t}]=0 \\
-Equality ~in ~absolute~ errors:~ &  E[|e_{t}|-|\breve{e}_{t}|]=0 \\
-Forecast ~\hat{y}_{t}~ encompases ~\breve{y}_{t}: &  E[(e_{t}-\breve{e}_{t})e_{t}]=0 \\
-Forecast ~\breve{y}_{t} ~ encompases ~\hat{y}_{t}:&  E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 \\
-\end{eqnarray}
+Equality  in  squared  errors:   $$ E[e^2_{t}-\breve{e}^2_{t}]=0  $$
+Equality in  absolute  errors:   $$ E[|e_{t}|-|\breve{e}_{t}|]=0   $$
+Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ :   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$
+Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ :   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$
+ 
