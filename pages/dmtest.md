@@ -19,9 +19,9 @@ hypothesis was actually true.
 
 |   symbol	|definition   	|
 |---	|---	|
-|   $$ e_{t}=y_{t}-\hat{y}_{t}  $$		| forecast error|
+|   $ e_{t}=y_{t}-\hat{y}_{t}  $		| forecast error|
 |   $$ \breve{e}_{t}=y_{t}-\breve{y}_{t}  $$		| benchmark error|
-|   $$ d_{t}=e^2_{t}-\breve{e}^2_{t} $$ 	| loss differential $$    	|
+|   $$ d_{t}=e^2_{t}-\breve{e}^2_{t} $$ 	| loss differential    	|
 
 
 ## DM Test-statistic
