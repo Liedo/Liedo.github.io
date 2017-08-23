@@ -16,10 +16,20 @@ We will also use [MathJax](https://www.mathjax.org/)
 to interpret correctly the Latex code included in the pages. Simply change the "_layouts/default.html" file 
 by adding the following lines before the header: 
 
+- Specify delimiters for inline mathematics: 
 ``` 
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 ```
 
+- Configuration of automatic equation numbering:
+``` 
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+``` 
+
+
+- Load Mathjax.js: 
 ```
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>    
 ```
@@ -28,7 +38,7 @@ Jekyll's default markdown parser, kramdown, requires you to use ```$$ ... $$``` 
 so you could  insert mathematical expressions such as  
 ``` $$ \phi $$
 ``` 
-, and it will be interpreted as $$ \phi $$. However, I am not sure how we could use other possibilities offered by $$ \LaTeX $$, 
+, and it will be interpreted as $ \phi $. However, I am not sure how we could use other possibilities offered by $$ \LaTeX $$, 
 e.g. the use of equation arrays, and make sure MathJax ([see Tex and Latex support](http://docs.mathjax.org/en/latest/tex.html)) interprets them correctly.
 
 
