@@ -48,7 +48,7 @@ of a GitHub repository.
 # Forecasting Evaluation in *J*Demetra*+*:
 
 - [Notation](pages/notation.md)
-- [Making an independent website](pages/independent_site.html)
+- [Diebold-Mariano Test](pages/dmtest.md)
 - [Making a personal site](pages/user_site.html)
 - [Making a site for a project](pages/project_site.html)
 - [Making a jekyll-free site](pages/nojekyll.html)
