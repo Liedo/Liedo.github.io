@@ -37,7 +37,7 @@ DM=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}}
 where $$ 2\pi\hat{f}_{d}(0) $$  is a consistent estimate. 
 Consider $$ 2\pi\hat{f}_{d}(0)=\sum^{(T-1)}_{\tau=-(T-1)}w_{\tau}\gamma_{d}(\tau) $$ , 
 where $$ \gamma_{d}(\tau)=\dfrac{1}{T}\sum^{T}_{t=|\tau|+1}(d_{t}-\bar{d})(d_{t-|\tau|}-\bar{d}) $$ . 
-Under the assumption that  $$ gamma_{d}(\tau)=0 $$  for $$ \tau\geq h $$ , 
+Under the assumption that  $$ \gamma_{d}(\tau)=0 $$  for $$ \tau\geq h $$ , 
 we can use a rectangular lag window estimator by setting $$ w_{\tau}=0 $$  for  $$ \tau\geq h $$ . 
 Another option is to use the Heteroschedasticity and Autocorrelation Consistent (HAC) 
 estimator proposed by Newey and West (1987). In this case, the weights could be given 
@@ -53,7 +53,7 @@ significance of the intercept, its associated standard errors need to take into 
 the autocorrelation patterns of the regression error, which are considered in the denominator 
 of equation (\ref{DMTEST}). 
 
-\textsf{\textit{J}Demetra\textit{+}} exploits the same unified framework 
+$$ \textsf{\textit{J}Demetra\textit{+}} $$ exploits the same unified framework 
 to conduct all forecasting accuracy tests.  But given the small sample sizes that are typical 
 in real-time forecasting applications, which leads to an over-rejection of the null hypothesis, 
 we follow Coroneo and Iacone (2015) and use a finite sample distributions of Kiefer and Vogelsang (2005). 
