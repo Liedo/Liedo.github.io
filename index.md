@@ -55,6 +55,12 @@ convert Markdown files to html, and this part is done
 automatically when you push the materials to the `gh-pages` branch
 of a GitHub repository.
 
+If anything here is confusing (or _wrong_!), or if I've missed
+important details, please
+[submit an issue](https://github.com/kbroman/simple_site/issues), or (even
+better) fork [the GitHub repository for this website](https://github.com/kbroman/simple_site),
+make modifications, and submit a pull request.
+
 # Forecasting Evaluation in *J*Demetra*+*:
 
 - [Notation](pages/notation.md)
@@ -65,11 +71,7 @@ of a GitHub repository.
 - [Testing your site locally](pages/local_test.html)
 - [Resources](pages/resources.html)
 
-If anything here is confusing (or _wrong_!), or if I've missed
-important details, please
-[submit an issue](https://github.com/kbroman/simple_site/issues), or (even
-better) fork [the GitHub repository for this website](https://github.com/kbroman/simple_site),
-make modifications, and submit a pull request.
+
 
 ---
 
