@@ -5,7 +5,7 @@ tagline: technical documentation for JDemetra$+$ using GitHub Pages
 description: Minimal tutorial on making a simple website with GitHub Pages
 ---
 
-# Using $$ \LaTeX $$ and Github pages to document the software JDemetra+
+# Prototype web page using  $$ \LaTeX $$  to document the software *J*Demetra*+*
 
 [Github Pages](https://pages.github.com) provide a simple way to make a
 website using
@@ -13,23 +13,23 @@ website using
 [git](https://git-scm.com). 
 
 We will also use [MathJax](https://www.mathjax.org/) 
-to interpret correctly the Latex code included in the pages (just change the _layouts/default.html file 
-by adding right before the header the following lines: 
+to interpret correctly the Latex code included in the pages. Simply change the "_layouts/default.html" file 
+by adding the following lines before the header: 
 
 ``` 
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
 ```
 
 ```
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>  
-)  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>    
 ```
 
-Does $$ \LaTeX $$ work here?  $$ \phi $$. It is working well, but it seems that you can only insert 
-mathematical expressions, like 
+Jekyll's default markdown parser, kramdown, requires you to use ```$$ ... $$``` for both inline and display style,
+so you could  insert mathematical expressions such as  
 ``` $$ \phi $$
 ``` 
-Equation arrays and other possibilities offered by $$ \LaTeX $$ will not be correctly interpreted by MathJax.
+, and it will be interpreted as $$ \phi $$. However, I am not sure how we could use other possibilities offered by $$ \LaTeX $$, 
+e.g. the use of equation arrays, and make sure MathJax interprets them correctly.
 
 
 With [GitHub Pages](https://pages.github.com), you just write things in
@@ -45,7 +45,7 @@ convert Markdown files to html, and this part is done
 automatically when you push the materials to the `gh-pages` branch
 of a GitHub repository.
 
-# Forecasting Evaluation in JDemetra+:
+# Forecasting Evaluation in *J*Demetra*+*:
 
 - [Notation](pages/notation.md)
 - [Making an independent website](pages/independent_site.html)

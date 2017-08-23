@@ -27,7 +27,8 @@ to highlight the fact that they are based on model-consistent
 expectations given by the parameter vector $$ \theta $$ .  
  
 
-In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. We will first test the following hypothesis involving forecast errors: 
+In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. 
+One could test the following hypothesis involving forecast errors: 
 
 |   Test	|Null   	|
 |---	|---	|
@@ -37,5 +38,6 @@ In forecasting comparisons involving competing forecasts resulting from the same
 |   Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ |   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$  	|
 |   Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ |   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$ |
 
-
+The subsequent pages describe the implementation details of the various tests within *J*Demetra*+* and compare them
+with the original formulation proposed by Diebold and Mariano (1995).
  
