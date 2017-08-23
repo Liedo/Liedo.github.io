@@ -29,7 +29,7 @@ so you could  insert mathematical expressions such as
 ``` $$ \phi $$
 ``` 
 , and it will be interpreted as $$ \phi $$. However, I am not sure how we could use other possibilities offered by $$ \LaTeX $$, 
-e.g. the use of equation arrays, and make sure MathJax interprets them correctly.
+e.g. the use of equation arrays, and make sure MathJax ([see Tex and Latex support](http://docs.mathjax.org/en/latest/tex.html)) interprets them correctly.
 
 
 With [GitHub Pages](https://pages.github.com), you just write things in
