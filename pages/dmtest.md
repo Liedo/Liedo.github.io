@@ -48,10 +48,12 @@ a function of the sample size $$ T $$.
 ## *J*Demetra*+* implementation
 
 The idea is to test the statistical significance of the regression of 
-$e^2_{t}-\breve{e}^2_{t}$ on an intercept.  In order to determine the statistical 
+$$ e^2_{t}-\breve{e}^2_{t} $$ on an intercept.  In order to determine the statistical 
 significance of the intercept, its associated standard errors need to take into account 
 the autocorrelation patterns of the regression error, which are considered in the denominator 
-of equation (\ref{DMTEST}). \textsf{\textit{J}Demetra\textit{+}} exploits the same unified framework 
+of equation (\ref{DMTEST}). 
+
+\textsf{\textit{J}Demetra\textit{+}} exploits the same unified framework 
 to conduct all forecasting accuracy tests.  But given the small sample sizes that are typical 
 in real-time forecasting applications, which leads to an over-rejection of the null hypothesis, 
 we follow Coroneo and Iacone (2015) and use a finite sample distributions of Kiefer and Vogelsang (2005). 
