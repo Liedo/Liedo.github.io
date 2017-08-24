@@ -37,7 +37,8 @@ null hypothesis in the first case implies the *acceptance*  of the symmetric sta
 
 The test-statistic is computed as follows. When the null hypothesis is that our model encompasses the benchmark, we define the sequence 
 $$ \{d_{t}\}^{T}_{t=1} $$ , where $$ d_{t}=e_{t}(e_{t}-\breve{e_{t}}) $$ , and we 
-compute $$ E1=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}} $$ , exactly as in equation (\ref{DMTEST}).  
+compute $$ E1=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}} $$ , which is equivalent to the test statistic of the  in
+[Diebold-Mariano Test](dmtest.md).  
 
   
 ### [Notation](notation.md)
