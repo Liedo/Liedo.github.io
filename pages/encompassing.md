@@ -23,41 +23,19 @@ will not be significantly different from zero in the following regression:
 \end{equation}
 
 
-$$
-\\begin{equation} 
-\\begin{array}{cc}
-  a & b \\\\
-  c & c
-\\end{array}
-\\end{equation}
-$$
+
 
 $$
 \begin{equation}
 \begin{array}{cc}
   a & b \\
-  c & c
+  c & y_{t|\mathcal{F}_{i}}
 \end{array}
 \end{equation}
 $$
 
  
-\\begin{equation} 
-\\begin{array}{cc}
-  a & b \\\\
-  c & c
-\\end{array}
-\\end{equation}
- 
 
- 
-\begin{equation}
-\begin{array}{cc}
-  a & b \\
-  c & c
-\end{array}
-\end{equation}
- 
 
 
 Following Harvey, Leybourne and Newbold (1998), the statistical significance 
