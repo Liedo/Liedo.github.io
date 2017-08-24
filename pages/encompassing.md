@@ -13,15 +13,15 @@ the difference between those benchmark forecasts and ours will not be a relevant
 at explaining our own forecast error. In other words, the regression coefficient $$ \lambda $$ 
 will not be significantly different from zero in the following regression:
 
-
+$$
 \begin{equation}
 \begin{array}{ccc}
- $$ \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}} $$ &  $$ = $$  &  $$ \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  $$  \label{encompass} \\
-&  $$ \Updownarrow  $$  & \nonumber \\
- $$  y_{t}= $$ &  $$ \lambda \breve{y}_{t|\mathcal{F}_{i}} $$ &   $$ + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}  $$ \label{combi}
+  \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}  &   =   &   \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}    \label{encompass} \\
+&   \Updownarrow    & \nonumber \\
+   y_{t}=  &   \lambda \breve{y}_{t|\mathcal{F}_{i}}  &    + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}   \label{combi}
 \end{array}
 \end{equation}
-
+$$
 
 
 
