@@ -23,47 +23,11 @@ $$
 \end{equation}
 $$
 
-$$
-\begin{eqnarray}
-  \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}    &  = & \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  \\
-   & \Updownarrow   &      \\
-    y_{t}=  & \lambda \breve{y}_{t|\mathcal{F}_{i}}  &   + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}    
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-  \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}    &  = & \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}   \label{encompass} \\
-   & \Updownarrow   &    \nonumber   \\
-    y_{t}=  & \lambda \breve{y}_{t|\mathcal{F}_{i}}  &   + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}     \label{combi}
-\end{eqnarray}
-$$
-
-
-
-$$
-\begin{equation}
-\begin{array}{ccc}
-  \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}    &  = & \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  \\
-   & \Updownarrow   &      \\
-    y_{t}=  & \lambda \breve{y}_{t|\mathcal{F}_{i}}  &   + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}    
-\end{array}
-\end{equation}
-$$
-
- 
-$$
-\begin{eqnarray}
-\underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}&=& \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  \label{encompass} \\
-&\Updownarrow& \nonumber \\
-y_{t}=& \lambda \breve{y}_{t|\mathcal{F}_{i}}&  + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t} \label{combi}
-\end{eqnarray}
-$$
 
 Following Harvey, Leybourne and Newbold (1998), the statistical significance 
-of the $$ \lambda $$ coefficient in regression \ref{encompass} can be used to reject 
+of the $$ \lambda $$ coefficient in expression \ref{combi} can be used to reject 
 the null hypothesis that our model encompasses the benchmark. In this case of rejection, 
-equation (\ref{combi}) suggests that a combination of the two forecast would yield a 
+the second expression in (\ref{combi}) suggests that a combination of the two forecast would yield a 
 more informative forecast. 
 
 By construction, the value of the coefficient of a regression 
