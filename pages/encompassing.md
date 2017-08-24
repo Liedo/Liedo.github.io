@@ -32,7 +32,7 @@ more informative forecast.
 
 By construction, the value of the coefficient of a regression 
 $$ \breve{e_{t}} =\alpha\breve{e_{t}}-e_{t}+\xi_{t} $$ is equal to $$ 1-\lambda $$, 
-but it is not necessarily true that the \textit{rejection} of the 
+but it is not necessarily true that the *rejection* of the 
 null hypothesis in the first case implies the *acceptance*  of the symmetric statement.
 
 The test-statistic is computed as follows. When the null hypothesis is that our model encompasses the benchmark, we define the sequence 
