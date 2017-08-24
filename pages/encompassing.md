@@ -15,11 +15,27 @@ will not be significantly different from zero in the following regression:
 
 \begin{equation}
 \begin{array}{ccc}
-\underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}&=& \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  \label{encompass} \\
-&\Updownarrow & \nonumber \\
-y_{t}=& \lambda \breve{y}_{t|\mathcal{F}_{i}}&  + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t} \label{combi}
+ $$ \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}} $$ &  $$ = $$  &  $$ \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}  $$  \label{encompass} \\
+&  $$ \Updownarrow  $$  & \nonumber \\
+ $$  y_{t}= $$ &  $$ \lambda \breve{y}_{t|\mathcal{F}_{i}} $$ &   $$ + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}  $$ \label{combi}
 \end{array}
 \end{equation}
+
+
+\begin{equation}
+\\begin{array}{cc}
+  a & b \\\\
+  c & c
+\\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{cc}
+  a & b \\
+  c & c
+\end{array}
+\end{equation}
+
 
 Following Harvey, Leybourne and Newbold (1998), the statistical significance 
 of the $$ \lambda $$ coefficient in regression \ref{encompass} can be used to reject 
