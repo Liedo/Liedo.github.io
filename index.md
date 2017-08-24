@@ -62,14 +62,10 @@ better) fork [the GitHub repository for this website](https://github.com/kbroman
 make modifications, and submit a pull request.
 
 # Forecasting Evaluation in *J*Demetra*+*:
-
-- [Notation](pages/notation.md)
-- [Diebold-Mariano Test](pages/dmtest.md)
-- [Making a personal site](pages/user_site.html)
-- [Making a site for a project](pages/project_site.html)
-- [Making a jekyll-free site](pages/nojekyll.html)
-- [Testing your site locally](pages/local_test.html)
-- [Resources](pages/resources.html)
+## [Notation](pages/notation.md)
+## [Diebold-Mariano Test](pages/dmtest.md)
+## [Encompassing Test](pages/encompassing.md)
+## [Bias and Efficiency](pages/bias.md)
 
 
 

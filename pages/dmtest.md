@@ -58,3 +58,8 @@ to conduct all forecasting accuracy tests.  But given the small sample sizes tha
 in real-time forecasting applications, which leads to an over-rejection of the null hypothesis, 
 we follow Coroneo and Iacone (2015) and use a finite sample distributions of Kiefer and Vogelsang (2005). 
 The distribution of the test statistic (\ref{DMTEST}) will depend on kernel and the bandwidth chosen, which is set by default equal to $T^{0.5}$. The results can be very different than those resulting from the traditional asymptotic theory, where the test statistic would have the same distribution under the null independently of the kernel and the bandwidth used. 
+
+### [Notation](pages/notation.md)
+### [Diebold-Mariano Test](pages/dmtest.md)
+### [Encompassing Test](pages/encompassing.md)
+### [Bias and Efficiency](pages/bias.md)
