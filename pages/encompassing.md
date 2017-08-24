@@ -31,6 +31,15 @@ $$
 \end{eqnarray}
 $$
 
+$$
+\begin{eqnarray}
+  \underbrace{y_{t}-y_{t|\mathcal{F}_{i}}}_{e_{t}}    &  = & \lambda \underbrace{(\breve{y}_{t|\mathcal{F}_{i}}-y_{t|\mathcal{F}_{i}})}_{e_{t}-\breve{e}_{t}}+ \xi_{t}   \label{encompass} \\
+   & \Updownarrow   &    \nonumber   \\
+    y_{t}=  & \lambda \breve{y}_{t|\mathcal{F}_{i}}  &   + (1-\lambda) y_{t|\mathcal{F}_{i}}+ \xi_{t}     \label{combi}
+\end{eqnarray}
+$$
+
+
 
 $$
 \begin{equation}
