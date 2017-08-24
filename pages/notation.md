@@ -43,7 +43,8 @@ One could test the following hypothesis involving forecast errors:
 The subsequent pages describe the implementation details of the various tests within *J*Demetra*+* and compare them
 with the original formulation proposed by Diebold and Mariano (1995).
  
-### [Notation](pages/notation.md)
-### [Diebold-Mariano Test](pages/dmtest.md)
-### [Encompassing Test](pages/encompassing.md)
-### [Bias and Efficiency](pages/bias.md)
+  
+### [Notation](notation.md)
+### [Diebold-Mariano Test](dmtest.md)
+### [Encompassing Test](encompassing.md)
+### [Bias and Efficiency](bias.md)
