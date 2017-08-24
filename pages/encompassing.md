@@ -22,6 +22,7 @@ will not be significantly different from zero in the following regression:
 \end{equation}
 
 
+
 \begin{equation}
 \\begin{array}{cc}
   a & b \\\\
@@ -35,7 +36,6 @@ will not be significantly different from zero in the following regression:
   c & c
 \end{array}
 \end{equation}
-
 
 Following Harvey, Leybourne and Newbold (1998), the statistical significance 
 of the $$ \lambda $$ coefficient in regression \ref{encompass} can be used to reject 
