@@ -1,30 +1,25 @@
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
+# Bias 
+
+In order to assess whether our forecasts are unbiased, 
+we will simply test the statistical significance of the average error. 
+In some cases, the time series of forecast errors 
+$$ \{e_{t}\}^{T}_{t=1} $$ may be autocorrelated 
+to some extent even when they are based on a model with IID innovations. 
+In such cases, the variance associated to the estimate of the average forecast error may be large. 
+The test statistic has exactly the same form as the previous tests discussed so far, 
+and it follows a standard normal distribution under the null of unbiased forecasts:  
+$$ BIAS=\dfrac{\bar{e}}{\sqrt{\dfrac{2\pi\hat{f}_{e}(0)}{T}}} $$
 
 
-The following is a math block:
+# Efficiency 
 
-$$ 5 + 5 $$
-
-But next comes a paragraph with an inline math statement:
-
-\$$ 5 + 5 $$
+We will test here a necessary condition for our forecasts to be efficient: absence of autocorrelation. 
+In the same spirit as the tests described above, we will assess the statistical significance of the forecast errors' autocorrelation. 
+Thus,  our sequence $$ \{d_{t}\}^{T}_{t=1} $$ will be defined with $$ d_{t}=e_{t}e_{t-1} $$.
 
 
-If you don’t even want the inline math statement, escape the first two dollar signs:
-\$\$ 5 + 5 $$
-
+### [Notation](notation.md)
+### [Diebold-Mariano Test](dmtest.md)
+### [Encompassing Test](encompassing.md)
+### [Bias and Efficiency](bias.md)
+### [Implementation in JDemetra+](jdimplementation.md)

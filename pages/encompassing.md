@@ -45,3 +45,4 @@ compute $$ E1=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}} $$ , which i
 ### [Diebold-Mariano Test](dmtest.md)
 ### [Encompassing Test](encompassing.md)
 ### [Bias and Efficiency](bias.md)
+### [Implementation in JDemetra+](jdimplementation.md)
