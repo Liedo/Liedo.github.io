@@ -40,7 +40,7 @@ so you could  insert mathematical expressions such as
 ``` $$ \phi $$
 ``` 
 , and it will be interpreted as $ \phi $. Syntax:
-- [Kramdown syntax](https://kramdown.gettalong.org/syntax.html#math-blocks)
+- [Kramdown quick reference](https://kramdown.gettalong.org/quickref.html) and [Kramdown syntax for mathematics](https://kramdown.gettalong.org/syntax.html#math-blocks)
 - [MathJax Tex and Latex support](http://docs.mathjax.org/en/latest/tex.html)) and [ongoing issues](https://github.com/mathjax/MathJax-docs/issues)
 
 
