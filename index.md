@@ -41,7 +41,7 @@ so you could  insert mathematical expressions such as
 ``` 
 , and it will be interpreted as $ \phi $. Syntax:
 - [Kramdown quick reference](https://kramdown.gettalong.org/quickref.html) and [Kramdown syntax for mathematics](https://kramdown.gettalong.org/syntax.html#math-blocks)
-- [MathJax Tex and Latex support](http://docs.mathjax.org/en/latest/tex.html)) and [ongoing issues](https://github.com/mathjax/MathJax-docs/issues)
+- [MathJax Tex and Latex support](http://docs.mathjax.org/en/latest/tex.html) and [ongoing issues](https://github.com/mathjax/MathJax-docs/issues)
 
 
 With [GitHub Pages](https://pages.github.com), you just write things in
@@ -73,4 +73,5 @@ make modifications, and submit a pull request.
 
 ---
 
-The source for this material is [on github](https://github.com/Liedo/Liedo.github.io).
+The source for this material is [on github](https://github.com/Liedo/Liedo.github.io), so you can actually clone it
+and use it as the basis for your own project.

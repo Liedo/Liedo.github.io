@@ -32,19 +32,20 @@ expectations given by the parameter vector $$ \theta $$ .
 In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. 
 One could test the following hypothesis involving forecast errors: 
 
-|   Test	|Null   	|
-|---	|---	|
-|   Unbiasedness	| $$ E[e_{t}]=0  $$	|
-|   Autocorrelation	| $$ E[e_{t}e_{t-1}]=0 $$    	|
-|   Equality  in  squared  errors	|  $$ E[e^2_{t}-\breve{e}^2_{t}]=0  $$  	|
-|   Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ |   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$  	|
-|   Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ |   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$ |
+|   Test	|Null   	|  JDemetra*+* class `AccuracyTests` |
+|        	|Hypothesis |  is extended by|
+|---	    |---	    |---      |
+|   Unbiasedness	| $$ E[e_{t}]=0  $$	|      `BiasTest`                        |
+|   Autocorrelation	| $$ E[e_{t}e_{t-1}]=0 $$    	|         `EfficiencyTest`         |  
+|   Equality  in  squared  errors	|  $$ E[e^2_{t}-\breve{e}^2_{t}]=0  $$  	|       `DieboldMarianoTest`     |
+|   Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ |   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$  	|   `EncompassingTest`         |
+|   Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ |   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$ |     `EncompassingTest`   |
 
-The subsequent pages describe the implementation details of the various tests within *J*Demetra*+* and compare them
-with the original formulation proposed by Diebold and Mariano (1995).
- 
+The subsequent pages describe the implementation details of the various tests within *J*Demetra*+*
+and examples of how to construct them.  
   
 ### [Notation](notation.md)
 ### [Diebold-Mariano Test](dmtest.md)
 ### [Encompassing Test](encompassing.md)
 ### [Bias and Efficiency](bias.md)
+### [Implementation in JDemetra+](jdimplementation.md)
