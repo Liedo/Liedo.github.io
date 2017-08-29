@@ -24,7 +24,7 @@ hypothesis was actually true.
 |   $$ d_{t}=e^2_{t}-\breve{e}^2_{t} $$ 	| loss differential    	|
 
 
-## DM Test-statistic
+## DM test-statistic
 
 The test-statistic that will be used to calculate our 
 p-values is computed as follows:
@@ -51,6 +51,16 @@ significance of the intercept, its associated standard errors need to take into 
 the autocorrelation patterns of the regression error, which are considered in the denominator 
 of equation (\ref{DMTEST}). 
 
+## DM test in small samples
+The small sample sizes that are typical 
+in real-time forecasting applications lead to an over-rejection of the null hypothesis under standard asymptotics, 
+so we follow the fixed-smoothing asymptotics proposed by Coroneo and Iacone (2015). The idea is to use the finite sample 
+distributions of Kiefer and Vogelsang (2005). As a result, the distribution of the test statistic (\ref{DMTEST}) 
+will depend on kernel and the bandwidth chosen, which is set by default equal to $T^{0.5}$. 
+The results can be very different than those resulting from the traditional asymptotic theory, 
+where the test statistic would have the same distribution under the null independently of the kernel and the bandwidth used. 
+
+
 ## *J*Demetra*+* implementation
 
 ### Class structure
@@ -67,27 +77,23 @@ which is specific to each test.
 - Given the loss function,  the DM test statistic defined in equation (\ref{DMTEST}) can be
 calculated within the `DieboldMarianoTest` class. The class also incorporates instructions regarding 
 how to calculate the pvalues  depending on whether one wants to use standard asymptotics or 
-fixed-smoothing asymptotics (the input `AsymptoticsType` is required). The small sample sizes that are typical 
-in real-time forecasting applications lead to an over-rejection of the null hypothesis under standard asymptotics, 
-so we follow the fixed-smoothing asymptotics proposed by Coroneo and Iacone (2015). The idea is to use the finite sample 
-distributions of Kiefer and Vogelsang (2005). As a result, the distribution of the test statistic (\ref{DMTEST}) 
-will depend on kernel and the bandwidth chosen, which is set by default equal to $T^{0.5}$. 
-The results can be very different than those resulting from the traditional asymptotic theory, 
-where the test statistic would have the same distribution under the null independently of the kernel and the bandwidth used. 
+fixed-smoothing asymptotics (the input `AsymptoticsType` is required). 
 
--  The class `ForecastEvaluation` contains methods to quantify errors: 
-Root Mean Squared Errors (RMSE), relative RMSE, Mean Absolute Errors (MAE), etc...  However, the tests
-contained in the class `AccuracyTests` will be constructed using the upper class `GlobalForecastingEvaluation`. This is
+- The class `ForecastEvaluation` contains methods to quantify errors: 
+Root Mean Squared Errors (RMSE), relative RMSE, Mean Absolute Errors (MAE), etc...  Those statistics could be
+reported along with the test results.
+
+- All the tests contained in the class `AccuracyTests` will be constructed using the upper class `GlobalForecastingEvaluation`. This is
 illustrated in the following example.
 
 ### A simple example
-Suppose we want evaluate the forecasts of a model ($ f^{m}_{t} $) and compare them with 
-those of a benchmark ($ f^{b}_{t} $). The following points explain all the steps 
+Suppose we want evaluate the forecasts of a model and compare them with 
+those of a benchmark. The following points explain all the steps 
 followed in the code below to run all the tests:
 
-- First we need to initialize an array of time series  'TsData[]' that includes 
-the two competing forecast (i.e. benchmark vs model) and the target. Next, we initialize the RMSE, which is
-often reported in forecasting comparisons, and the p-values corresponding to the tests. 	
+- First we need to initialize an array of time series  `TsData[]` that includes 
+the two competing forecast (i.e. benchmark vs model) and the target. Next, we initialize the p-value corresponding 
+to the test, and the RMSE, which will be calculated at the end. 	
 - Second, we initialize the `eval` object of the class `GlobalForecastingEvaluation`, 
 which will contain all test results. The inputs needed to run the tests are three time series: our model's forecasts, 
 those of the benchmark, and the actual data, which is the target. We also need to specify the kind of 
@@ -95,9 +101,10 @@ distribution of the various test statistics under the null, which is given by a 
 `AccuracyTests.AsymptoticsType.STANDARD_FIXED_B` is used. By choosing the option 
 `AccuracyTests.AsymptoticsType.HAR_FIXED_B`, the distribution tabulated by Kiefer and Vogelsang (2005) is used. 
 - For each type of test, the bandwidth used to estimate the variance needs to be specified. 
-Otherwise, the default value will be used ($ T^{1/2} $). The relevant statistics for each test as well as the 
+Otherwise, the default value will be used ($$ T^{1/2} $$). The relevant statistics for each test as well as the 
 pvalues are obtained with a simple get command. Notice that `getPValue(twoSided)`  uses the logical argument 
 `true` in order to get the p-values of the two-sided test.
+- Finally, the `feval` object of the class `ForecastEvaluation` is initialized in order to calculate the RMSE.
 
 ``` java
     public void example() {
@@ -106,16 +113,16 @@ pvalues are obtained with a simple get command. Notice that `getPValue(twoSided)
 
     double rmse = new double ;
     double dmPval = new double ;
+	boolean twoSided = true;
     
     int bandwith = (int) Math.pow(series.getObsCount(), 1.0 / 2.0);
     
     GlobalForecastingEvaluation eval = new GlobalForecastingEvaluation(model, benchmark, target,
     AccuracyTests.AsymptoticsType.HAR_FIXED_B);
-    eval.getDieboldMarianoTest().setBandwith(bandwith);
+	eval.getDieboldMarianoTest().setBandwith(bandwith);    
+    dmPval = eval.getDieboldMarianoTest().getPValue(twoSided); 
     
-	boolean twoSided = true;
-    dmPval = eval.getDieboldMarianoTest().getPValue(twoSided);
-    ForecastEvaluation feval = new ForecastEvaluation(model, benchmark, target);
+	ForecastEvaluation feval = new ForecastEvaluation(model, benchmark, target);
     rmse = feval.calcRMSE();   
     }
 ```
