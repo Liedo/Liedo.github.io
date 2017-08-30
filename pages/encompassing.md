@@ -40,46 +40,65 @@ $$ \{d_{t}\}^{T}_{t=1} $$ , where $$ d_{t}=e_{t}(e_{t}-\breve{e_{t}}) $$ , and w
 compute $$ E1=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}} $$ , which is equivalent to the test statistic of the  in
 [Diebold-Mariano Test](dmtest.md).  
 
-### Class structure
+## Small samples <a name="fixedsmoothing"></a>
+The small sample sizes that are typical 
+in real-time forecasting applications lead to an over-rejection of the null hypothesis under standard asymptotics, 
+so we follow the *fixed-smoothing asymptotics* proposed by Coroneo and Iacone (2015). The idea is to use the finite sample 
+distributions of Kiefer and Vogelsang (2005). As a result, the distribution of the test statistic (\ref{DMTEST}) 
+will depend on kernel and the bandwidth chosen, which is set by default equal to $T^{0.5}$. 
+The results can be very different than those resulting from the traditional asymptotic theory, 
+where the test statistic would have the same distribution under the null independently of the kernel and the bandwidth used. 
+
+---
+
+
+# *J*Demetra*+* implementation
+
+## Class structure
 *J*Demetra*+* exploits the same unified framework 
 to conduct all forecasting accuracy tests.  
 
-- The class `AccuracyTests` is extended the by each one of the subclasses containing 
-`BiasTest`, `EfficiencyTest`, `DieboldMarianoTest` and `EncompassingTest`. 
+- The class `AccuracyTests` contains all methods required to perform the tests. All calculations are equivalent independently of the kind of test
+because the calculation of the  loss function $ d_{t} $ is defined using abstraction, which is one of the features of the Java programming language. As a result, 
+this class is extended by several classes that incorportate a  precise implementation of the method to calculate the loss
+function: `BiasTest`, `EfficiencyTest`, `DieboldMarianoTest` and `EncompassingTest`. 
 The constructor of each one of these classes can generate the tests 
-when either the forecasts or the forecast errors are given as an input. 
-These classes also define the method to calculate the loss function $ d_{t} $, 
-which is specific to each test.  
+when either the forecasts or the forecast errors are given as an input. Another input required is a boolean (`AsymptoticsType`) specifying whether 
+standard asymptotics or 
+[fixed-smoothing](#fixedsmoothing) asymptotics.
 
-- Given the loss function defined above $$ \{d_{t}\}^{T}_{t=1} $$,  the test statistic can be
-calculated within the `EncompassingTest` class. The class also incorporates instructions regarding 
-how to calculate the pvalues  depending on whether one wants to use standard asymptotics or 
-fixed-smoothing asymptotics (the input `AsymptoticsType` is required). 
-
-- All the tests contained in the class `AccuracyTests` will be constructed using the upper class `GlobalForecastingEvaluation`. This is
+- All the tests contained in the class `AccuracyTests` will be constructed using the class `GlobalForecastingEvaluation`, which contains the various
+tests as objects. This is
 illustrated in the following example.
 
-### A simple example
+- The class `ForecastEvaluation` contains methods to quantify errors: 
+Root Mean Squared Errors (RMSE), relative RMSE, Mean Absolute Errors (MAE), etc...  Those statistics could be
+reported along with the test results.
+
+
+## A simple example
 Suppose we want evaluate the forecasts of a model and compare them with 
 those of a benchmark. The following points explain all the steps 
 followed in the code below to run all the tests:
 
 - First we need to initialize an array of time series  `TsData[]` that includes 
 the two competing forecast (i.e. benchmark vs model) and the target. Next, we initialize the p-value corresponding 
-to the test, and the RMSE, which will be calculated at the end. 	
+to the test.
 - Second, we initialize the `eval` object of the class `GlobalForecastingEvaluation`, 
 which will contain all test results. The inputs needed to run the tests are three time series: our model's forecasts, 
 those of the benchmark, and the actual data, which is the target. We also need to specify the kind of 
 distribution of the various test statistics under the null, which is given by a normal distribution when 
 `AccuracyTests.AsymptoticsType.STANDARD_FIXED_B` is used. By choosing the option 
 `AccuracyTests.AsymptoticsType.HAR_FIXED_B`, the distribution tabulated by Kiefer and Vogelsang (2005) is used. 
+- Since `eval` belongs to the class `GlobalForecastingEvaluation`, which contains all tests, the instruction `eval.getModelEncompassesBenchmarkTest()`
+will trigger the necessary calculations.  In this example, we will be asking for the pvalues and weights of the test.
+- Notice that two different hypothesis are tested at the same time: 
+	..*Model forecasts encompasses Benchmark forecasts (`getModelEncompassesBenchmarkTest()`)
+	..*Benchmark forecasts encompasses Model forecasts (`getBenchmarkEncompassesModelTest()`)
 - For each type of test, the bandwidth used to estimate the variance needs to be specified. 
 Otherwise, the default value will be used ($$ T^{1/2} $$). The relevant statistics for each test as well as the 
 pvalues are obtained with a simple get command. Notice that `getPValue(twoSided)`  uses the logical argument 
 `true` in order to get the p-values of the two-sided test.
-
-- Notice that two different hypothesis are tested at the same time: a) Model forecasts encompasses Benchmark forecasts, b) Benchmark forecasts encompasses Model forecasts.
-Thus, there are two different get commands:  `getModelEncompassesBenchmarkTest()` and `getBenchmarkEncompassesModelTest()` . 
 
 - From this test, we can get the pvalues and also the weight defined in 
 equation \ref{combi}. For example, if the pvalue obtained in 
@@ -89,30 +108,30 @@ to the Benchmark (`getModelEncompassesBenchmarkTest().calcWeights()` ) will be v
 
 
 ``` java
-    public void example() {
+public void example() {
     
-    TsData[] series = {benchmark, model, target};
+TsData[] series = {benchmark, model, target};
     
-    boolean twoSided = true;
+boolean twoSided = true;
   
-    double m_enc_bench = new double ;
-    double m_enc_bench_Pval = new double ;
+double m_enc_bench = new double ;
+double m_enc_bench_Pval = new double ;
    
-    double bench_enc_m = new double ;
-    double bench_enc_m_Pval = new double ;
+double bench_enc_m = new double ;
+double bench_enc_m_Pval = new double ;
     
-    // squared root of T
-    int bandwith = (int) Math.pow(series.getObsCount(), 1.0 / 2.0);
+// squared root of T
+int bandwith = (int) Math.pow(series.getObsCount(), 1.0 / 2.0);
     
-    GlobalForecastingEvaluation eval = new GlobalForecastingEvaluation(model, benchmark, target,
-    AccuracyTests.AsymptoticsType.HAR_FIXED_B);
+GlobalForecastingEvaluation eval = new GlobalForecastingEvaluation(model, benchmark, target,
+AccuracyTests.AsymptoticsType.HAR_FIXED_B);
    
-    eval.getModelEncompassesBenchmarkTest().setBandwith(bandwith);
+eval.getModelEncompassesBenchmarkTest().setBandwith(bandwith);
    
-    m_enc_bench = eval.getModelEncompassesBenchmarkTest().calcWeights();
-    m_enc_bench_Pval = eval.getModelEncompassesBenchmarkTest().getPValue(twoSided);
-    bench_enc_m = eval.getBenchmarkEncompassesModelTest().calcWeights();
-    bench_enc_m_Pval = eval.getBenchmarkEncompassesModelTest().getPValue(twoSided);
+m_enc_bench = eval.getModelEncompassesBenchmarkTest().calcWeights();
+m_enc_bench_Pval = eval.getModelEncompassesBenchmarkTest().getPValue(twoSided);
+bench_enc_m = eval.getBenchmarkEncompassesModelTest().calcWeights();
+bench_enc_m_Pval = eval.getBenchmarkEncompassesModelTest().getPValue(twoSided);
     }
 ```
 	

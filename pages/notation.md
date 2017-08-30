@@ -32,7 +32,7 @@ expectations given by the parameter vector $$ \theta $$ .
 In forecasting comparisons involving competing forecasts resulting from the same information set, the subindex $i$ will be removed because it does not play a role. 
 One could test the following hypothesis involving forecast errors: 
 
-|   Test	|Null   Hypothesis	|  JDemetra*+* class is extended by`AccuracyTests` |
+|   Test	|Null   Hypothesis	|  JDemetra*+* class `AccuracyTests` is extended by  |
 |---	    |---	    |---      |
 |   Unbiasedness	| $$ E[e_{t}]=0  $$	|      `BiasTest`                        |
 |   Autocorrelation	| $$ E[e_{t}e_{t-1}]=0 $$    	|         `EfficiencyTest`         |  
