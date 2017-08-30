@@ -44,7 +44,7 @@ compute $$ E1=\dfrac{\bar{d}}{\sqrt{\dfrac{2\pi\hat{f}_{d}(0)}{T}}} $$ , which i
 The small sample sizes that are typical 
 in real-time forecasting applications lead to an over-rejection of the null hypothesis under standard asymptotics, 
 so we follow the *fixed-smoothing asymptotics* proposed by Coroneo and Iacone (2015). The idea is to use the finite sample 
-distributions of Kiefer and Vogelsang (2005). As a result, the distribution of the test statistic (\ref{DMTEST}) 
+distributions of Kiefer and Vogelsang (2005). As a result, the distribution of the test statistic 
 will depend on kernel and the bandwidth chosen, which is set by default equal to $T^{0.5}$. 
 The results can be very different than those resulting from the traditional asymptotic theory, 
 where the test statistic would have the same distribution under the null independently of the kernel and the bandwidth used. 
