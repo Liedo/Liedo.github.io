@@ -56,11 +56,10 @@ reported along with the test results.
 ### A simple example
 Suppose we want evaluate the forecasts of a model, but instead of comparing them with 
 those of a benchmark, as in the [Diebold-Mariano](dmtest.md) or[Encompassing](encompassing.md) tests, we
-want to assess: 
-- is the average forecast error  different from zero?
-- are forecast errors autocorrelated? 
+want to assess: a) is the average forecast error  different from zero? b) are forecast errors autocorrelated? 
 In the first case, estimating the average forecast error would help to adjust the forecast by removing the systematic bias. 
-In the second case, a forecast error would be able to predict part of the subsequent error. 
+In the second case, a forecast error would be able to predict part of the subsequent error. The same questions may be 
+asked about the benchmark forecasts themselves, although the tests do not involve any forecasting comparison.
 
 
 - First we need to initialize an array of time series  `TsData[]` that includes 
