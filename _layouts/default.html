@@ -54,7 +54,7 @@ MathJax.Hub.Config({
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Content</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">Forecasting Evaluation</a>
               <a class="dropdown-item" href="#">Seasonality Tests</a>
@@ -87,12 +87,12 @@ MathJax.Hub.Config({
 	
 	
 	
-	
+	<div class="container">
 	
     <section class="main-content">
       {{ content }}
 
-	     <div class="container">
+	
 
       <div class="row row-offcanvas row-offcanvas-right">
 
@@ -140,11 +140,11 @@ MathJax.Hub.Config({
 
         <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item active">Forecasting Evaluation</a>
+            <a href="#" class="list-group-item">Seasonality Tests</a>
+            <a href="#" class="list-group-item">State-Space Framework</a>
+            <a href="#" class="list-group-item">Nowcasting and Modeling Expectations</a>
+            <a href="#" class="list-group-item">Seasonal Adjustment</a>
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
             <a href="#" class="list-group-item">Link</a>
@@ -160,17 +160,8 @@ MathJax.Hub.Config({
         <p>EUPL; Company 2017</p>
       </footer>
 
-    </div><!--/.container-->
 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
 	  
 	  
 	  
@@ -179,6 +170,8 @@ MathJax.Hub.Config({
       </footer>
 	  
     </section>
+	
+	    </div><!--/.container-->
 
     {% if site.google_analytics %}
       <script type="text/javascript">
