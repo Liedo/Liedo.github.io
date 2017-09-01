@@ -68,7 +68,7 @@ make modifications, and submit a pull request.
 ## [Diebold-Mariano Test](pages/dmtest.md)
 ## [Encompassing Test](pages/encompassing.md)
 ## [Bias and Efficiency](pages/bias.md)
-## [Implementation in JDemetra+](examples/offcanvas/)
+## [Example from bootstrap](examples/offcanvas/)
 
 
 ---
