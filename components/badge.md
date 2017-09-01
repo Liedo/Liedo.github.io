@@ -7,10 +7,6 @@ group: components
 
 Small and adaptive tag for adding context to just about any content.
 
-## Contents
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
 
 ## Example
 
