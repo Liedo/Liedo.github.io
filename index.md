@@ -67,7 +67,7 @@ make modifications, and submit a pull request.
 ## [Notation](pages/notation.md)
 ## [Diebold-Mariano Test](pages/dmtest.md)
 ## [Encompassing Test](pages/encompassing.md)
-## [Bias and Efficiency](pages/bias.md)
+## [Bias and Efficiency Tests](pages/bias.md)
 ## [Example from bootstrap](examples/offcanvas/)
 
 
