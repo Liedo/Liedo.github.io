@@ -9,6 +9,11 @@ description: Minimal tutorial on making a simple website with GitHub Pages
 <h1> Time Series Concepts for JDemetra+</h1>
 <p> Prototype website using Latex to document the software JDemetra+</p>
 </div>
+
+<p class="float-right d-md-none">
+<button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+</p>
+
    
 [Github Pages](https://pages.github.com) provide a simple way to make a
 website using
