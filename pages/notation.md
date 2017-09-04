@@ -42,9 +42,11 @@ One could test the following hypothesis involving forecast errors:
 
 The subsequent pages describe the implementation details of the various tests within *J*Demetra*+*
 and examples of how to construct them.  
-  
-### [Notation](notation.md)
-### [Diebold-Mariano Test](dmtest.md)
-### [Encompassing Test](encompassing.md)
-### [Bias and Efficiency](bias.md)
-### [Implementation in JDemetra+](jdimplementation.md)
+ 
+ <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+  <div class="list-group">
+    <a href="https://liedo.github.io/pages/dmtest.html" class="list-group-item active">Diebold-Mariano Test</a>
+    <a href="https://liedo.github.io/pages/encompassing.html" class="list-group-item">Encompassing Test</a>
+    <a href="https://liedo.github.io/pages/bias.html" class="list-group-item">Bias and Inefficiency</a>
+   </div>
+  </div><!--/span-->
