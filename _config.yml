@@ -2,5 +2,12 @@ name: David de Antonio Liedo
 markdown: kramdown
 sass:
     style: :compressed
-theme: jekyll-theme-cayman 
- 
+
+
+highlighter:      rouge
+
+kramdown:
+  auto_ids: true
+
+# Permalinks
+permalink:        pretty
