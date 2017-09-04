@@ -71,7 +71,17 @@ important details, please
 better) fork [the GitHub repository for this website](https://github.com/Liedo/Liedo.github.io),
 make modifications, and submit a pull request.
 
-
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+</button>
+	  
+<div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+  <div class="list-group">
+    <a href="https://liedo.github.io/pages/dmtest.html" class="list-group-item active">Diebold-Mariano Test</a>
+    <a href="https://liedo.github.io/pages/encompassing.html" class="list-group-item">Encompassing Test</a>
+    <a href="https://liedo.github.io/pages/bias.html" class="list-group-item">Bias and Inefficiency</a>
+   </div>
+  </div><!--/span-->
 ---
 
 The source for this material is [on github](https://github.com/Liedo/Liedo.github.io)
